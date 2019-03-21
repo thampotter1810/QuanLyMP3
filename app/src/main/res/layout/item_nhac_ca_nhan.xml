@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#419c93"
+    android:layout_margin="2dp"
+    app:cardCornerRadius="10dp"
+
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="#f1f1f1"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:maxWidth="250dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="30sp"
+                android:text="Tên bài hát"
+                android:id="@+id/tvtenbaihatcanhan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:ellipsize="end"
+                android:maxWidth="250dp"
+                android:maxLines="1"
+                android:text="Tên ca sĩ"
+                android:textStyle="italic"
+                android:textSize="25sp"
+                android:id="@+id/tvtencasicanhan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvluotthichcanhan"
+            android:maxLines="1"
+            android:textSize="15sp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:text="Lượt thích:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/imgdelete"
+            android:layout_margin="10dp"
+            android:src="@drawable/icondelete"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvluotthichcanhan"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <ImageView
+            android:id="@+id/imgedit"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/iconedit"
+            android:layout_toLeftOf="@+id/imgdelete"
+            android:layout_below="@+id/tvluotthichcanhan"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

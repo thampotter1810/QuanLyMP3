@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b2d7dc"
+    android:orientation="vertical"
+    tools:context="com.example.thampotter.quanlynhac.Activity.DangKyThanhVienActivity">
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:text="Đăng ký thành viên"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:gravity="center"
+        android:textSize="25sp"
+        android:hint="Username"
+        android:id="@+id/edusernamemoi"
+        android:inputType="text"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:hint="PassWord"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:id="@+id/edpasswordmoi"
+        android:inputType="textPassword"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:ems="5"
+            android:id="@+id/btnhuydangky"
+            android:textAllCaps="false"
+            android:text="Hủy"
+            android:textSize="25sp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btndangky"
+            android:text="Xác nhận"
+            android:textAllCaps="false"
+            android:textSize="25sp"
+            android:ems="5"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

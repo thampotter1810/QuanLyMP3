@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:gravity="center"
+        android:text="Đăng Nhập vào hệ thống"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:inputType="textPersonName"
+        android:id="@+id/eddialogusername"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center"
+        android:hint="Tên đăng nhập"
+        android:layout_marginTop="15dp"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:inputType="textPassword"
+        android:id="@+id/eddialogpassword"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center"
+        android:hint="Mật Khẩu"
+        android:layout_marginTop="15dp"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textColor="#1e24a4"
+        android:id="@+id/tvdangnhapdangky"
+        android:layout_gravity="center"
+        android:textSize="25sp"
+        android:text="Đăng ký tài khoản mới..."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btndangnhaphuy"
+            android:textAllCaps="false"
+            android:text="Hủy"
+            android:textSize="25sp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btndangnhapdangnhap"
+            android:text="Đăng nhập"
+            android:textAllCaps="false"
+            android:textSize="25sp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

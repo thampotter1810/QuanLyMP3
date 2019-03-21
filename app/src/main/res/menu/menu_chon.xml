@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menucaidat"
+        android:title="Cài đặt"></item>
+    <item android:id="@+id/menusearch"
+        android:title="Tìm kiếm" android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView"></item>
+    <item android:id="@+id/menuupload"
+        android:title="Tải lên" android:icon="@android:drawable/ic_menu_upload"
+        app:showAsAction="always"></item>
+
+</menu>

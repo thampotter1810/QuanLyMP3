@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textColor="#fff"
+            android:id="@+id/tvthutubaihat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:text="Tên bài hát"
+            android:singleLine="true"
+            android:maxWidth="200dp"
+            android:ellipsize="end"
+            android:layout_toRightOf="@+id/tvthutubaihat"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tvtenbaihatdanhsachphat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="14sp"
+            android:textColor="#ffff"
+            android:text="Tên ca sĩ"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_below="@+id/tvtenbaihatdanhsachphat"
+            android:layout_toRightOf="@+id/tvthutubaihat"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tvtencasidanhsachphat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

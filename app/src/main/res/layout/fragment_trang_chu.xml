@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:scrollbars="none"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fragment
+            android:name="com.example.thampotter.quanlynhac.Fragment.Fragment_Banner"
+            android:id="@+id/fragmentbanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <fragment
+            android:name="com.example.thampotter.quanlynhac.Fragment.Fragment_Playlist"
+            android:id="@+id/fragmentplaylist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <fragment
+            android:name="com.example.thampotter.quanlynhac.Fragment.Fragment_ChuDe_TheLoai"
+            android:id="@+id/fragmentchudetheloai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <fragment
+            android:name="com.example.thampotter.quanlynhac.Fragment.Fragment_Album"
+            android:id="@+id/fragmentalbumhot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <fragment
+            android:name="com.example.thampotter.quanlynhac.Fragment.Fragment_BaiHat"
+            android:id="@+id/fragmentbaihathot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
