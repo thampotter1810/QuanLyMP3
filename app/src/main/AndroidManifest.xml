@@ -39,9 +39,15 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activity.DanhSachTatCaAlbumActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".Activity.PhatNhacActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar" android:label="Trình phát nhạc"></activity>
-        <service android:name=".Service.ServicePlayMusic"></service>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activity.PhatNhacActivity"
+            android:label="Trình phát nhạc"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <service android:name=".Service.ServicePlayMusic" />
+
+        <activity android:name=".Activity.SearchActivity" android:label="Tìm kiếm"></activity>
     </application>
 
 </manifest>

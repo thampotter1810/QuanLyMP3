@@ -55,7 +55,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class NhacActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
+public class NhacActivity extends AppCompatActivity {
 
     String url = "https://androidzing.000webhostapp.com/Server/dangnhap.php";
     TabLayout tabLayout;
@@ -114,9 +114,9 @@ public class NhacActivity extends AppCompatActivity implements SearchView.OnQuer
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.menu_chon,menu);
 
-        MenuItem menuItem = menu.findItem(R.id.menusearch);
+        /*MenuItem menuItem = menu.findItem(R.id.menusearch);
         SearchView searchView = (SearchView) menuItem.getActionView();
-        searchView.setOnQueryTextListener(this);
+        searchView.setOnQueryTextListener(this);*/
 
         return true;
 
@@ -133,6 +133,9 @@ public class NhacActivity extends AppCompatActivity implements SearchView.OnQuer
                 Intent intent = new Intent(NhacActivity.this,SelectFileActivity.class);
                 startActivityForResult(intent,REQUEST_CODE);
             }
+        }if (item.getItemId() == R.id.menusearch){
+            Intent intent = new Intent(NhacActivity.this, SearchActivity.class);
+            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -200,20 +203,6 @@ public class NhacActivity extends AppCompatActivity implements SearchView.OnQuer
         dialog.show();
     }
 
-    @Override
-    public boolean onQueryTextSubmit(String query) {
-
-        //search here
-
-        return true;
-    }
-
-    @Override
-    public boolean onQueryTextChange(String newText) {
-
-        //search here
-        return false;
-    }
 
     private void hienThongBao() {
         final Dialog dialog = new Dialog(this);

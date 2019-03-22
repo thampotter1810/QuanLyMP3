@@ -6,8 +6,7 @@
         android:title="Cài đặt"></item>
     <item android:id="@+id/menusearch"
         android:title="Tìm kiếm" android:icon="@android:drawable/ic_menu_search"
-        app:showAsAction="always"
-        app:actionViewClass="android.widget.SearchView"></item>
+        app:showAsAction="always"></item>
     <item android:id="@+id/menuupload"
         android:title="Tải lên" android:icon="@android:drawable/ic_menu_upload"
         app:showAsAction="always"></item>

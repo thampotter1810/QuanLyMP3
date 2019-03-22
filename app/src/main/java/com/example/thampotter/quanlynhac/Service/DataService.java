@@ -92,4 +92,12 @@ public interface DataService {
     @POST("Server/deletemusic.php")
     Call<String> XoaBaiHat(@Field("idbaihat") String idbaihat, @Field("baihat") String baihat);
 
+    @FormUrlEncoded
+    @POST("Server/editsong.php")
+    Call<String> EditSong(@Field("idbaihat") String idbaihat, @Field("tenBaiHat") String tenbaihat);
+
+    @FormUrlEncoded
+    @POST("Server/selectallsong.php")
+    Call<List<Baihat>> GetAllSong(@Field("tenBaiHat") String tenbaihat);
+
 }

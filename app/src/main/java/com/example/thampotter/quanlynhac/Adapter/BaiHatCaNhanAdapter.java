@@ -1,6 +1,7 @@
 package com.example.thampotter.quanlynhac.Adapter;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,6 +10,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -79,9 +83,13 @@ public class BaiHatCaNhanAdapter extends RecyclerView.Adapter<BaiHatCaNhanAdapte
                 }
             });
 
+
+
             imgedit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    //Toast.makeText(context, "Chuc nang sua thong tin", Toast.LENGTH_SHORT).show();
+                    hienedit(listbaihat.get(getPosition()).getTenbaihat().toString(),listbaihat.get(getPosition()).getIdbaihat());
 
                 }
             });
@@ -93,6 +101,53 @@ public class BaiHatCaNhanAdapter extends RecyclerView.Adapter<BaiHatCaNhanAdapte
                     xacNhanXoa(listbaihat.get(getPosition()).getTenbaihat());
                 }
             });
+        }
+
+        private void hienedit(final String tenbaihat, final String idbaihat) {
+            final Dialog dialog = new Dialog(context);
+            dialog.setContentView(R.layout.dialogedit_custom);
+
+            final EditText edtenbaihat = dialog.findViewById(R.id.edtenbaihatedit);
+
+            Button btnOk = dialog.findViewById(R.id.btnxacnhanedit);
+            Button btnhuyedit = dialog.findViewById(R.id.btnhuyedit);
+
+            edtenbaihat.setText(tenbaihat.trim().toString());
+
+            btnOk.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    DataService dataService = APIService.getService();
+                    Call<String> callback = dataService.EditSong(idbaihat,edtenbaihat.getText().toString().trim());
+                    Log.e("TENBAIHATEDIT",edtenbaihat.getText().toString().trim());
+                    Log.e("IDBAIHATEDIT",idbaihat.toString());
+                    callback.enqueue(new Callback<String>() {
+                        @Override
+                        public void onResponse(Call<String> call, Response<String> response) {
+                            Log.e("EDIT", response.body());
+                            if (response.body() != null){
+                                Toast.makeText(context, "Sửa thành công!", Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<String> call, Throwable t) {
+
+                        }
+                    });
+                }
+
+            });
+
+            btnhuyedit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    dialog.dismiss();
+                }
+            });
+
+            dialog.show();
         }
 
         public void xacNhanXoa(String ten){
