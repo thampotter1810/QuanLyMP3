@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_margin="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:src="@drawable/musicplay"
+        android:id="@+id/imgallsong"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:text="Tên bài hát"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/imgallsong"
+        android:textSize="25sp"
+        android:id="@+id/tvallsong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
